@@ -66,7 +66,7 @@
 
 #### 1.2什么是HTML
 
-HTML指的是超文本标i记语言（Hyper Text Markup Language），它是用来描述网页的一种语言。
+HTML指的是超文本标记语言（Hyper Text Markup Language），它是用来描述网页的一种语言。
 
 HTML不是一种编程语言，而是一种标记语言（markup language）
 
@@ -83,3 +83,12 @@ HTML不是一种编程语言，而是一种标记语言（markup language）
 <img src="https://img.goojoe.cc/2022/01/26/efpK6F6H.png">
 ```
 
+![image-20220204140107241](https://img.goojoe.cc/2022/02/04/GyDqiAWb.webp)
+
+#### 1.3网页的形成
+
+网页是由网页元素组成的，这些元素是利用html标签描述出来，然后通过浏览器解析来显示给用户的
+
+![image-20220204140625175](https://img.goojoe.cc/2022/02/04/rQZ2KE6I.webp)
+
+前端人员开发代码-->浏览器显示代码（解析、渲染）--->生成最后的Web页面
