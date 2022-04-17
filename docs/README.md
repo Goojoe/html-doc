@@ -2,32 +2,52 @@
 
 我又回来写文档了参考[黑马CSS教程](https://www.bilibili.com/video/BV14J4114768)
 
+因为bilibili嵌入体验并不好,只有480P,所以直接放链接,大家自己去看吧,视频超链接到了标题
+
 # HTML5
 
-## 1.查阅文档
+## [1.查阅文档](https://www.bilibili.com/video/BV14J4114768?p=60)
 
 - [Google](https://Google.com.hk)
 
 - [W3C-school](https://www.w3school.com.cn/)
+
 - [Mozilla MDN](https://developer.mozilla.org/zh-CN/)
 
-# CSS3
+    - 搜索标签即可,例如
 
-## 1.基础结构
+        ```
+        font-size
+        ```
+
+
+# [CSS3](https://www.bilibili.com/video/BV14J4114768?p=61)
+
+## [1.基础结构](https://www.bilibili.com/video/BV14J4114768?p=63)
 
 选择器:{样式}
 
 ```css
-h1 {colror:red;}
+<style>
+h1 {
+    color:red;
+}
+</style>
 ```
 
-## 2.CSS基础选择器
+## [2.CSS基础选择器](https://www.bilibili.com/video/BV14J4114768?p=65)
 
-### 2.1标签选择器(div)
+### [2.1标签选择器(div)](https://www.bilibili.com/video/BV14J4114768?p=65)
 
 选择所有标签
 
-### 2.2类选择器(.class)
+```css
+h1 {
+    color:red;
+}
+```
+
+### [2.2类选择器(.class)](https://www.bilibili.com/video/BV14J4114768?p=67)
 
 - 单独选择一个,或者某几个标签
 
@@ -42,27 +62,26 @@ h1 {colror:red;}
                 /* 背景颜色 */
                 background-color: green;
             }
+    /*给div加上类属性以选择修改样式*/
     <div class='red'>红色</div>
     ```
 
 多类名:
+一个标签指定多个类名
 
-    一个标签指定多个类名
-    
-    ```css
-    <div class-"red font20">亚瑟</div>
-    ```
-    
-    1. 在标签class属性中写多类名
-    2. 多个类名中间必须用空格分开
-    3. 使用场景
-        1. 属性复用
-        2. 标签相同样式放到一个类里面
-        3. 标签调用公共的类,在调用独有的类
-        4. 从而节省CSS代码,统一修改也非常方便
-        5. 多类名选择器在后期布局复杂的情况使用比较多
+```html
+<div class-"red font20">亚瑟</div>
+```
+1. 在标签class属性中写多类名
+2. 多个类名中间必须用空格分开
+2. 使用场景
+    1. 属性复用
+    2. 标签相同样式放到一个类里面
+    3. 标签调用公共的类,在调用独有的类
+    4. 从而节省CSS代码,统一修改也非常方便
+    5. 多类名选择器在后期布局复杂的情况使用比较多
 
-### 2.3ID选择器(#ID)
+### [2.3ID选择器(#ID)](https://www.bilibili.com/video/BV14J4114768?p=70)
 
 - ID选择器可以为标有特定ID的HTML元素指定特定的样式
 
@@ -84,7 +103,7 @@ h1 {colror:red;}
 3. ID选择器和类选择器最大的区别在于使用次数
 4. 类选择器修改样式使用最多,ID选择器一般用于界面唯一性元素上,经常和JS搭配使用
 
-### 2.4通配符选择器(*)
+### [2.4通配符选择器(*)](https://www.bilibili.com/video/BV14J4114768?p=71)
 
 选取所有的元素
 
@@ -104,7 +123,11 @@ h1 {colror:red;}
 }
 ```
 
-## 3.CSS字体属性
+## [3.CSS字体属性](https://www.bilibili.com/video/BV14J4114768?p=72)
+
+CSS Fonts（字体）属性用于定义字体系列、大小、粗细、和文字样式（如斜体）。
+
+### [3.1字体家族 | font-family](https://www.bilibili.com/video/BV14J4114768?p=72)
 
 定义字体样式
 
@@ -114,9 +137,9 @@ h2 {
 }
 ```
 
-- 各种字体之间半角,隔开
+- 各种字体之间半角`,`隔开
 
-- 有空格隔开的单词字体,用""隔开
+- 有空格隔开的单词字体,用`""`包裹
 
 - 尽量使用系统字体
 
@@ -128,21 +151,21 @@ h2 {
         }
         ```
 
-### 3.1字体大小 | font-size
+### [3.1字体大小 | font-size](https://www.bilibili.com/video/BV14J4114768?p=73)
 
 ```css
 body {
-	font-size: 20px;
+	font-size: 16px;
 }
 ```
 
 - Google Chrome默认16px
 - 不同浏览器默认大小不一致,可能导致显示字号不一致,不要默认大小
-- body指定整个页面大小
+- 可以使用body指定整个页面大小
 
-### 3.2字体粗细 | font-weight
+### [3.2字体粗细 | font-weight](https://www.bilibili.com/video/BV14J4114768?p=74)
 
-[MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight)
+- [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight)
 
 ```css
 body {
@@ -156,7 +179,7 @@ body {
 | bold(700)   | 加粗                                 |
 | 100-900     | 400=normal,700=bold,数字后面没有单位 |
 
-### 3.3文字样式(斜体,下划线) | font-style
+### [3.3文字样式(斜体,下划线) | font-style](https://www.bilibili.com/video/BV14J4114768?p=75)
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style)
 
@@ -166,7 +189,7 @@ body {
 }
 ```
 
-### 3.4字体连写-复合属性
+### [3.4font复合属性写法](https://www.bilibili.com/video/BV14J4114768?p=76)
 
 ```css
 body {
@@ -174,28 +197,64 @@ body {
 }
 ```
 
-## 4.CSS文本属性
+例子
 
-### 4.1文本颜色
+```css
+body {
+	font: italic 700 16px "microsoft yahei"
+}
+
+```
+
+
+
+### [3.5字体属性总结](https://www.bilibili.com/video/BV14J4114768?p=77)
+
+| 属性        | 表示     | 注意点                                                       |
+| ----------- | -------- | ------------------------------------------------------------ |
+| font-size   | 字号     | 我们通常用的单位是px(pixel)像素，一定要跟上单位              |
+| font-family | 字体     | 实际工作中按照团队约定来写字体                               |
+| font-weight | 字体粗细 | 记住加粗是700或者bold不加粗是normal或者400记住数字不要跟单位 |
+| font-style  | 字体样式 | 记住倾斜是italic,不倾斜是normal工作中我们最常用normal        |
+| font        | 字体连写 | 1.字体连写是有顺序的不能随意换位置 2.其中字号和字体必须同时出现 |
+
+
+
+## [4.CSS文本属性](https://www.bilibili.com/video/BV14J4114768?p=78)
+
+CSS Text（文本）属性可定义文本的外观，比如文本的颜色、对齐文本、装饰文本、文本缩进、行间距等。
+
+### [4.1文本颜色 | color](https://www.bilibili.com/video/BV14J4114768?p=78)
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color)
 
+- 关键词颜色
+
 ```css
-/* 关键词 */
-color: currentcolor;
+color: pink
+```
 
-/* <named-color>值 */
-color: red;
-color: orange;
-color: tan;
-color: rebeccapurple;
+- 16进制颜色 | 设置颜色透明度可转换RGBA
 
-/* <hex-color>值 */
-color: #090;
-color: #009900;
-color: #090a;
-color: #009900aa;
+```css
+color: #4183c4
+```
 
+- RGB(A)
+
+R:red(红)
+
+G:green(绿)
+
+B:blue(蓝)
+
+A:alpha(透明度)
+
+
+
+写法
+
+```
 /* <rgb()>值 */
 color: rgb(34, 12, 64, 0.6);
 color: rgba(34, 12, 64, 0.6);
@@ -203,22 +262,36 @@ color: rgb(34 12 64 / 0.6);
 color: rgba(34 12 64 / 0.3);
 color: rgb(34.0 12 64 / 60%);
 color: rgba(34.6 12 64 / 30%);
-
-/* <hsl()>值 */
-color: hsl(30, 100%, 50%, 0.6);
-color: hsla(30, 100%, 50%, 0.6);
-color: hsl(30 100% 50% / 0.6);
-color: hsla(30 100% 50% / 0.6);
-color: hsl(30.0 100% 50% / 60%);
-color: hsla(30.2 100% 50% / 60%);
-
-/* 全局值 */
-color: inherit;
-color: initial;
-color: unset;
 ```
 
-### 4.2对齐文本
+---
+
+- HSL(A)
+
+> 根据其色调、饱和度和亮度分量表示给定颜色。一个可选的 alpha 分量表示颜色的透明度。
+
+H:色调
+
+S:饱和度
+
+L:亮度
+
+A:alpha(透明度)
+
+
+
+写法
+
+```
+hsla(100, 100%, 50%, 1) /* #5f0 */
+hsla(235, 100%, 50%, .5) /* #0015ff with 50% opacity */
+hsla(235 100% 50% / 1); /* CSS Colors 4 space-separated values */
+```
+
+
+
+
+### 4.2对齐文本 | text-align
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align)
 
@@ -230,7 +303,7 @@ div {
 }
 ```
 
-### 4.3装饰文本(删除线,下划线,上划线)
+### 4.3装饰文本(删除线,下划线,上划线) | text-decoration
 
 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration)
 
@@ -240,7 +313,7 @@ div {
 }
 ```
 
-### 4.4段落文本缩进
+### 4.4段落文本缩进 | text-indent
 
 ```css
 p {
@@ -250,7 +323,7 @@ p {
 
 em是一个相对单位,就是当前元素(font-size)1个文字的大小来缩进
 
-### 4.5行高
+### 4.5行高 | text-height
 
 ```css
 p {
@@ -641,10 +714,14 @@ flex是flexible Box的缩写，意为"弹性布局”，用来为盒状模型提
 器成员，称为Flex项目(flex item),简称"项目"。
 
 ## 12.Bootstrap简介
-Bootstrap来自Twitter（推特），是目前最受欢p的前端框架。Bootstrap是基于HTML、CSS和JAVASCRIPT
+Bootstrap来自Twitter（推特），是目前最受欢迎的前端框架。
+
+Bootstrap是基于HTML、CSS和JAVASCRIPT
+
 的，它简洁灵活，使得Web开发更加快捷。
-●中文官网：http://www.bootcss..com/
-●官网：http://getbootstrap.com/
-●推荐使用：http://bootstrap.css88.com/
-**框架：**顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而目控制权在框架本身，有预制样式库、组
-件和插件。使用者要按照框架所规定的某种规范进行开发。
+
+- 官网：http://getbootstrap.com/
+
+- 中文文档(非官方)：http://www.bootcss.com/
+
+**框架：**顾名思义就是一套架构，它有一套比较完整的网页功能解决方案，而目控制权在框架本身，有预制样式库、组件和插件。使用者要按照框架所规定的某种规范进行开发。
