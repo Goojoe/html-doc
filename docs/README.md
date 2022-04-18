@@ -1,4 +1,6 @@
-# **html的文档**
+![](https://img.goojoe.cc/2022/04/16/odbGRlJa.webp)
+
+# **HTML5-CSS3文档**
 
 我又回来写文档了参考[黑马CSS教程](https://www.bilibili.com/video/BV14J4114768)
 
@@ -9,6 +11,13 @@
 https://test.goojoe.cc/nav/
 
 因为bilibili嵌入体验并不好,只有480P,所以直接放链接,大家自己去看吧,视频超链接到了标题
+
+- 无聊可以听首歌哦:`For Life(feat. Marmy)(Coelium Remix)-Rival`
+
+<audio controls="" src="https://test.goojoe.cc/nav/music.mp3">
+Your browser does not support the
+<code>audio</code> element.
+</audio>
 
 # [前言](https://www.bilibili.com/video/BV14J4114768)
 
