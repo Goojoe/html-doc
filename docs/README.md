@@ -1,4 +1,7 @@
 ![](https://img.goojoe.cc/2022/04/16/odbGRlJa.webp)
+> 幽竹晨雪，白兔相望
+
+[Pic by Lunami](https://www.pixiv.net/artworks/70791127)
 
 # **HTML5-CSS3文档**
 
@@ -704,8 +707,121 @@ float:属性值
     缺点：添加许多无意义的标签，结构化较差
 
 2. **父级添加overflow属性**
+
+    可以给父级添加overflow属性，将其属性值设置为hidden、auto或scroll.
+    子不教,父之过,注意是给父元素添加代码
+
+    - 优点：代码简洁
+    - 缺点：无法显示溢出的部分
+
 3. **父级添加after伪元素**
+
+    ```css
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    .clearfix {
+      /*IE6、7专有*/
+      *zoom: 1;
+    }
+    ```
+
+    - 优点：没有增加标签，结构更简弹
+    - 缺点：照顾低版本浏览器
+    - 代表网站：百度、淘宝网、网易等
+
 4. **父级添加双伪元素**
+
+    也是给父元素添加
+
+    ```css
+    .clearfix:before,
+    .clearfix:after {
+      content: "";
+      display: table;
+    }
+    
+    .clearfix:after {
+      clear: both;
+    }
+    
+    .clearfix {
+      *zoom: 1;
+    }
+    ```
+
+    - 优点：代码更简洁
+    - 缺点：照顾低版本浏览器
+    - 代表网站：小米、腾讯等
+
+### 10.10清除浮动总结
+
+为什么需要清除浮动？
+
+1. 父级没高度。
+2. 子盒子浮动了。
+3. 影响下面布局了，我们就应该清除浮动了。
+
+| 清除浮动的方式       | 优点               | 缺点                               |
+| -------------------- | ------------------ | ---------------------------------- |
+| 额外标签法（隔墙法） | 通俗易懂，书写方便 | 添加许多无意义的标签，结构化较差。 |
+| 父级overflow:hidden; | 书写简单           | 溢出隐藏                           |
+| 父级after伪元素      | 结构语义化正确     | 由于IE6-7不支持：after,兼容性问题  |
+| 父级双伪元素         | 结构语义化正确     | 由于1E6-7不支持：after,兼容性问题  |
+
+### PS切图
+
+没啥好说的`CTRL+E`合并图层导出即可
+
+## [11.学成在线案例](https://www.bilibili.com/video/BV14J4114768?p=195)
+
+1.典型的企业级网站
+2.目的是为了整体感知企业级网站布局流程复习以前知识
+
+### 11.1准备素材和工具
+
+1. 学成在线PSD源文件。
+2. 开发工具:
+    1. PS（切图）/cutterman插件
+    2. vscode（代码）
+    3. chrome（测试）
+
+### 11.2案例准备工作
+
+我们本次采取结构与样式相分离思想：
+
+1. 创建study目录文件夹（用于存放我们这个页面的相关内容）。
+2. 用vscode打开这个目录文件夹。
+3. study目录内新建images文件夹，用于保存图片。
+4. 新建首页文件index.html(以后我们的网站首页统规定为index.html).
+5. 新建style.css样式文件。我们本次采用外链样式表。
+6. 将样式引入到我们的HTML页面文件中。
+
+```css
+<link rel="stylesheet" href="style.css">
+```
+
+7. 样式表写入清除内外边距的样式，来检测样式表是否引入成功。
+
+```css
+* {
+	margin: 0;
+	padding: 0;
+}
+```
+
+### 11.3CSS属性书写顺序（重点）
+
+建议遵循以下顺序：
+
+1. 布局定位属性：display/position./float/clear/visibility/overflow(建议display第一个写，毕竟关系到模式)
+2. 自身属性：width/height/margin/padding/border/background
+3. 文本属性：color/font/text-decoration/text-align/vertical--align/white-space/break-word
+4. 其他属性(CSS3):content./cursor/border-radius/box-shadow/text-shadow/background::linear-gradient.…
 
 ## 11.Flex布局
 
